@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verity Accounting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="navbar__container">
+
+      <a href="#" class="navbar__logo">
+        <img src="verity accounting firm.png" alt="Verity Accounting Firm" />
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#consultation" class="mobile-cta">Request a Consultation</a>
+      </nav>
+
+      <a href="#consultation" class="navbar__cta">Request a Consultation</a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <!-- Photo: Scott Graham / Unsplash (office desk with financials) -->
+  <section class="hero" id="home" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&auto=format&fit=crop&q=80');">
+    <div class="hero__overlay"></div>
+    <div class="hero__container">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Trusted Financial Experts</p>
+        <h1 class="hero__heading">
+          Accounting, Tax &amp;<br />Bookkeeping Support
+        </h1>
+        <p class="hero__description">
+          At Verity Accounting, we help individuals and businesses take control of their finances.
+          From day-to-day bookkeeping and payroll to tax planning and financial reporting, our
+          dedicated team delivers accurate, timely, and transparent support — so you can focus
+          on growing what matters most.
+        </p>
+        <div class="hero__actions">
+          <a href="#consultation" class="hero__cta-primary">Request a Consultation</a>
+          <a href="services.html" class="hero__cta-secondary">Explore Our Services</a>
+        </div>
+      </div>
+
+      <!-- Stat block -->
+      <div class="hero__visual">
+        <div class="hero__card">
+          <div class="hero__stat">
+            <span class="hero__stat-number">500+</span>
+            <span class="hero__stat-label">Clients Served</span>
+          </div>
+          <div class="hero__divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">15+</span>
+            <span class="hero__stat-label">Years Experience</span>
+          </div>
+          <div class="hero__divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">98%</span>
+            <span class="hero__stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+        <ul class="hero__checklist">
+          <li>Tax Preparation &amp; Planning</li>
+          <li>Bookkeeping &amp; Payroll</li>
+          <li>Financial Reporting</li>
+          <li>Business Advisory</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="services__container">
+
+      <div class="services__header">
+        <p class="services__eyebrow">What We Offer</p>
+        <h2 class="services__heading">Our Services</h2>
+        <p class="services__subtext">
+          We provide end-to-end financial support tailored to your business needs.
+        </p>
+      </div>
+
+      <div class="services__grid">
+
+        <!-- Card 1 — Photo: Mika Baumeister / Unsplash (spreadsheets) -->
+        <div class="service-card">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" alt="Monthly Bookkeeping" />
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Monthly Bookkeeping</h3>
+            <p class="service-card__desc">
+              Stay on top of your finances with our consistent, accurate monthly bookkeeping.
+              We record and reconcile every transaction — income, expenses, and bank statements —
+              so your books are always clean, current, and audit-ready.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 — featured — Photo: Cytonn Photography / Unsplash (business meeting) -->
+        <div class="service-card service-card--featured">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=80" alt="CIPC Assistance" />
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">CIPC Assistance</h3>
+            <p class="service-card__desc">
+              From company registration to annual return submissions, we handle all your CIPC
+              compliance requirements. We make the administrative side of running a business
+              simple, fast, and stress-free.
+            </p>
+            <a href="#consultation" class="service-card__link">Get Started →</a>
+          </div>
+        </div>
+
+        <!-- Card 3 — Photo: Nataliya Vaitkevich / Pexels (tax documents) -->
+        <div class="service-card">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&auto=format&fit=crop&q=80" alt="Tax Support" />
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Tax Support</h3>
+            <p class="service-card__desc">
+              We take the complexity out of tax season. Our team handles individual and business
+              tax returns, VAT submissions, and proactive tax planning strategies to ensure
+              you stay compliant and keep more of what you earn.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONSULTATION FORM ===== -->
+  <section class="consultation" id="consultation">
+    <div class="consultation__container">
+
+      <div class="consultation__info">
+        <p class="consultation__eyebrow">Get In Touch</p>
+        <h2 class="consultation__heading">Request a Free Consultation</h2>
+        <p class="consultation__text">
+          Ready to take control of your finances? Fill in your details and one of our
+          team members will reach out within one business day.
+        </p>
+        <ul class="consultation__benefits">
+          <li>No obligation, completely free</li>
+          <li>Personalised advice for your situation</li>
+          <li>Response within 1 business day</li>
+          <li>Based in Menlyn Maine, Pretoria</li>
+        </ul>
+      </div>
+
+      <div class="consultation__form-wrap">
+        <form class="consult-form" id="consultForm" novalidate>
+
+          <div class="consult-form__row">
+            <div class="consult-form__field">
+              <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+              <span class="consult-form__error" id="firstNameError"></span>
+            </div>
+            <div class="consult-form__field">
+              <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+              <span class="consult-form__error" id="lastNameError"></span>
+            </div>
+          </div>
+
+          <div class="consult-form__field">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@business.co.za" required />
+            <span class="consult-form__error" id="emailError"></span>
+          </div>
+
+          <div class="consult-form__field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+27 82 000 0000" />
+          </div>
+
+          <div class="consult-form__field">
+            <label for="businessName">Business Name</label>
+            <input type="text" id="businessName" name="businessName" placeholder="Your Business (Pty) Ltd" />
+          </div>
+
+          <div class="consult-form__field">
+            <label for="service">Service of Interest <span aria-hidden="true">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="Monthly Bookkeeping">Monthly Bookkeeping</option>
+              <option value="Tax Support">Tax Support</option>
+              <option value="CIPC Assistance">CIPC Assistance</option>
+              <option value="Cloud Accounting">Cloud Accounting</option>
+              <option value="Auditing & Assurance">Auditing &amp; Assurance</option>
+              <option value="Advisory">Advisory</option>
+              <option value="Virtual CFO Services">Virtual CFO Services</option>
+              <option value="Other / Not Sure">Other / Not Sure</option>
+            </select>
+            <span class="consult-form__error" id="serviceError"></span>
+          </div>
+
+          <div class="consult-form__field">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="4" placeholder="Briefly describe what you need help with…" required></textarea>
+            <span class="consult-form__error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="consult-form__submit" id="submitBtn">
+            <span class="consult-form__submit-text">Send Request</span>
+            <span class="consult-form__submit-loader" aria-hidden="true"></span>
+          </button>
+
+          <!-- Success / error feedback -->
+          <div class="consult-form__feedback consult-form__feedback--success" id="formSuccess" role="alert" aria-live="polite" hidden>
+            ✅ Thank you! We've received your request and will be in touch within one business day.
+          </div>
+          <div class="consult-form__feedback consult-form__feedback--error" id="formError" role="alert" aria-live="polite" hidden>
+            ⚠️ Something went wrong. Please try again or email us directly.
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
