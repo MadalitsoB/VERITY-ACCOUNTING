@@ -489,6 +489,12 @@
 }
 
 @media (max-width: 600px) {
+  .about-story,
+  .about-services,
+  .about-team {
+    padding: 64px 20px;
+  }
+
   .about-services__grid {
     grid-template-columns: 1fr;
   }
@@ -500,5 +506,15 @@
 
   .about-hero {
     padding: 72px 20px 80px;
+  }
+
+  .about-location,
+  .about-cta {
+    padding: 56px 20px;
+  }
+
+  .about-location__badge {
+    max-width: 100%;
+    padding: 28px 24px;
   }
 }

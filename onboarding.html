@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Onboarding | Verity Accounting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="onboarding.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <img src="verity accounting firm.png" alt="Verity Accounting Firm" />
+      </a>
+      <nav class="navbar__links" id="navLinks">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#contact">Contact Us</a>
+        <a href="index.html#consultation" class="mobile-cta">Request a Consultation</a>
+      </nav>
+      <a href="onboarding.html" class="navbar__cta">Sign Up</a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="ob-header">
+    <div class="ob-header__container">
+      <h1 class="ob-header__heading">Client Onboarding Form</h1>
+      <p class="ob-header__desc">
+        Welcome to Verity Accounting. Please complete all sections below so we can set up
+        your profile and assign the right team members to your account.
+      </p>
+      <!-- Step indicators -->
+      <div class="ob-steps" id="obSteps">
+        <div class="ob-step active" data-step="1">
+          <span class="ob-step__num">1</span>
+          <span class="ob-step__label">Personal Details</span>
+        </div>
+        <div class="ob-step__line"></div>
+        <div class="ob-step" data-step="2">
+          <span class="ob-step__num">2</span>
+          <span class="ob-step__label">Business Info</span>
+        </div>
+        <div class="ob-step__line"></div>
+        <div class="ob-step" data-step="3">
+          <span class="ob-step__num">3</span>
+          <span class="ob-step__label">Services Required</span>
+        </div>
+        <div class="ob-step__line"></div>
+        <div class="ob-step" data-step="4">
+          <span class="ob-step__num">4</span>
+          <span class="ob-step__label">Review and Submit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="ob-form-section">
+    <div class="ob-form-section__container">
+      <form id="onboardingForm" novalidate>
+
+        <!-- STEP 1: Personal Details -->
+        <div class="ob-panel active" id="panel1">
+          <h2 class="ob-panel__title">Personal Details</h2>
+          <p class="ob-panel__desc">Tell us about the primary contact for this account.</p>
+
+          <div class="ob-row">
+            <div class="ob-field">
+              <label for="ob_title">Title</label>
+              <select id="ob_title" name="title">
+                <option value="" disabled selected>Select</option>
+                <option>Mr</option>
+                <option>Ms</option>
+                <option>Mrs</option>
+                <option>Dr</option>
+                <option>Prof</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ob-row ob-row--2">
+            <div class="ob-field">
+              <label for="ob_firstName">First Name <span>*</span></label>
+              <input type="text" id="ob_firstName" name="firstName" placeholder="Jane" />
+              <span class="ob-error" id="err_firstName"></span>
+            </div>
+            <div class="ob-field">
+              <label for="ob_lastName">Last Name <span>*</span></label>
+              <input type="text" id="ob_lastName" name="lastName" placeholder="Doe" />
+              <span class="ob-error" id="err_lastName"></span>
+            </div>
+          </div>
+
+          <div class="ob-row ob-row--2">
+            <div class="ob-field">
+              <label for="ob_idNumber">ID Number <span>*</span></label>
+              <input type="text" id="ob_idNumber" name="idNumber" placeholder="8001015009087" maxlength="13" />
+              <span class="ob-error" id="err_idNumber"></span>
+            </div>
+            <div class="ob-field">
+              <label for="ob_dob">Date of Birth <span>*</span></label>
+              <input type="date" id="ob_dob" name="dob" />
+              <span class="ob-error" id="err_dob"></span>
+            </div>
+          </div>
+
+          <div class="ob-row ob-row--2">
+            <div class="ob-field">
+              <label for="ob_email">Email Address <span>*</span></label>
+              <input type="email" id="ob_email" name="email" placeholder="jane@business.co.za" />
+              <span class="ob-error" id="err_email"></span>
+            </div>
+            <div class="ob-field">
+              <label for="ob_phone">Phone Number <span>*</span></label>
+              <input type="tel" id="ob_phone" name="phone" placeholder="079 123 4567" />
+              <span class="ob-error" id="err_phone"></span>
+            </div>
+          </div>
+
+          <div class="ob-field">
+            <label for="ob_address">Residential Address <span>*</span></label>
+            <input type="text" id="ob_address" name="address" placeholder="12 Example Street, Suburb, City, 0001" />
+            <span class="ob-error" id="err_address"></span>
+          </div>
+
+          <div class="ob-actions">
+            <button type="button" class="ob-btn ob-btn--next" onclick="goToStep(2)">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Business Information -->
+        <div class="ob-panel" id="panel2">
+          <h2 class="ob-panel__title">Business Information</h2>
+          <p class="ob-panel__desc">Provide your business details so we can tailor our services correctly.</p>
+
+          <div class="ob-row ob-row--2">
+            <div class="ob-field">
+              <label for="ob_bizName">Registered Business Name <span>*</span></label>
+              <input type="text" id="ob_bizName" name="bizName" placeholder="My Business (Pty) Ltd" />
+              <span class="ob-error" id="err_bizName"></span>
+            </div>
+            <div class="ob-field">
+              <label for="ob_tradingName">Trading Name (if different)</label>
+              <input type="text" id="ob_tradingName" name="tradingName" placeholder="My Business" />
+            </div>
+          </div>
+
+          <div class="ob-row ob-row--2">
+            <div class="ob-field">
+              <label for="ob_regNumber">CIPC Registration Number</label>
+              <input type="text" id="ob_regNumber" name="regNumber" placeholder="2020/123456/07" />
+            </div>
+            <div class="ob-field">
+              <label for="ob_vatNumber">VAT Registration Number</label>
+              <input type="text" id="ob_vatNumber" name="vatNumber" placeholder="4710123456" />
+            </div>
+          </div>
+
+          <div class="ob-row ob-row--2">
+            <div class="ob-field">
+              <label for="ob_bizType">Business Type <span>*</span></label>
+              <select id="ob_bizType" name="bizType">
+                <option value="" disabled selected>Select</option>
+                <option>Sole Proprietor</option>
+                <option>Partnership</option>
+                <option>Private Company (Pty) Ltd</option>
+                <option>Public Company (Ltd)</option>
+                <option>Non-Profit Organisation</option>
+                <option>Trust</option>
+                <option>Other</option>
+              </select>
+              <span class="ob-error" id="err_bizType"></span>
+            </div>
+            <div class="ob-field">
+              <label for="ob_industry">Industry <span>*</span></label>
+              <select id="ob_industry" name="industry">
+                <option value="" disabled selected>Select</option>
+                <option>Agriculture</option>
+                <option>Construction</option>
+                <option>Education</option>
+                <option>Financial Services</option>
+                <option>Healthcare</option>
+                <option>Hospitality and Tourism</option>
+                <option>IT and Technology</option>
+                <option>Legal</option>
+                <option>Manufacturing</option>
+                <option>Mining</option>
+                <option>Real Estate</option>
+                <option>Retail and Wholesale</option>
+                <option>Transport and Logistics</option>
+                <option>Other</option>
+              </select>
+              <span class="ob-error" id="err_industry"></span>
+            </div>
+          </div>
+
+          <div class="ob-row ob-row--2">
+            <div class="ob-field">
+              <label for="ob_employees">Number of Employees</label>
+              <select id="ob_employees" name="employees">
+                <option value="" disabled selected>Select</option>
+                <option>1 (just me)</option>
+                <option>2 to 5</option>
+                <option>6 to 20</option>
+                <option>21 to 50</option>
+                <option>51 to 100</option>
+                <option>More than 100</option>
+              </select>
+            </div>
+            <div class="ob-field">
+              <label for="ob_financialYearEnd">Financial Year End Month</label>
+              <select id="ob_financialYearEnd" name="financialYearEnd">
+                <option value="" disabled selected>Select</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ob-field">
+            <label for="ob_bizAddress">Business Address</label>
+            <input type="text" id="ob_bizAddress" name="bizAddress" placeholder="12 Business Park, Suburb, City, 0001" />
+          </div>
+
+          <div class="ob-field">
+            <label for="ob_currentSoftware">Current Accounting Software (if any)</label>
+            <select id="ob_currentSoftware" name="currentSoftware">
+              <option value="" disabled selected>Select</option>
+              <option>None</option>
+              <option>Xero</option>
+              <option>QuickBooks</option>
+              <option>Sage</option>
+              <option>Pastel</option>
+              <option>Excel only</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="ob-actions">
+            <button type="button" class="ob-btn ob-btn--back" onclick="goToStep(1)">Back</button>
+            <button type="button" class="ob-btn ob-btn--next" onclick="goToStep(3)">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Services Required -->
+        <div class="ob-panel" id="panel3">
+          <h2 class="ob-panel__title">Services Required</h2>
+          <p class="ob-panel__desc">Select all services you are interested in. We will use this to put the right team in place for you.</p>
+
+          <div class="ob-checkgroup">
+            <label class="ob-checkbox">
+              <input type="checkbox" name="services" value="Monthly Bookkeeping" />
+              <span class="ob-checkbox__box"></span>
+              <span class="ob-checkbox__label">
+                <strong>Monthly Bookkeeping</strong>
+                <small>Transaction recording, bank reconciliation and monthly reports</small>
+              </span>
+            </label>
+            <label class="ob-checkbox">
+              <input type="checkbox" name="services" value="Tax Support" />
+              <span class="ob-checkbox__box"></span>
+              <span class="ob-checkbox__label">
+                <strong>Tax Support</strong>
+                <small>Personal and business tax returns, VAT and PAYE submissions</small>
+              </span>
+            </label>
+            <label class="ob-checkbox">
+              <input type="checkbox" name="services" value="CIPC Assistance" />
+              <span class="ob-checkbox__box"></span>
+              <span class="ob-checkbox__label">
+                <strong>CIPC Assistance</strong>
+                <small>Company registration, annual returns and amendments</small>
+              </span>
+            </label>
+            <label class="ob-checkbox">
+              <input type="checkbox" name="services" value="Cloud Accounting" />
+              <span class="ob-checkbox__box"></span>
+              <span class="ob-checkbox__label">
+                <strong>Cloud Accounting</strong>
+                <small>Xero or QuickBooks setup, training and ongoing support</small>
+              </span>
+            </label>
+            <label class="ob-checkbox">
+              <input type="checkbox" name="services" value="Auditing and Assurance" />
+              <span class="ob-checkbox__box"></span>
+              <span class="ob-checkbox__label">
+                <strong>Auditing and Assurance</strong>
+                <small>Independent audits, reviews and internal control assessments</small>
+              </span>
+            </label>
+            <label class="ob-checkbox">
+              <input type="checkbox" name="services" value="Advisory" />
+              <span class="ob-checkbox__box"></span>
+              <span class="ob-checkbox__label">
+                <strong>Advisory</strong>
+                <small>Business performance, cash flow forecasting and growth planning</small>
+              </span>
+            </label>
+            <label class="ob-checkbox">
+              <input type="checkbox" name="services" value="Virtual CFO Services" />
+              <span class="ob-checkbox__box"></span>
+              <span class="ob-checkbox__label">
+                <strong>Virtual CFO Services</strong>
+                <small>Strategic financial leadership, budgeting and investor reporting</small>
+              </span>
+            </label>
+          </div>
+          <span class="ob-error" id="err_services"></span>
+
+          <div class="ob-field" style="margin-top: 28px;">
+            <label for="ob_startDate">Preferred Start Date</label>
+            <input type="date" id="ob_startDate" name="startDate" />
+          </div>
+
+          <div class="ob-field">
+            <label for="ob_additionalNotes">Additional Notes</label>
+            <textarea id="ob_additionalNotes" name="additionalNotes" rows="4" placeholder="Any other information you would like us to know"></textarea>
+          </div>
+
+          <div class="ob-field">
+            <label for="ob_hearAboutUs">How did you hear about us?</label>
+            <select id="ob_hearAboutUs" name="hearAboutUs">
+              <option value="" disabled selected>Select</option>
+              <option>Google Search</option>
+              <option>Social Media</option>
+              <option>Referral from a friend or colleague</option>
+              <option>Walk-in</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="ob-actions">
+            <button type="button" class="ob-btn ob-btn--back" onclick="goToStep(2)">Back</button>
+            <button type="button" class="ob-btn ob-btn--next" onclick="goToStep(4)">Review</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Review and Submit -->
+        <div class="ob-panel" id="panel4">
+          <h2 class="ob-panel__title">Review and Submit</h2>
+          <p class="ob-panel__desc">Please review your details before submitting. You can go back to make any changes.</p>
+
+          <div class="ob-review" id="obReview">
+            <!-- Populated by JS -->
+          </div>
+
+          <div class="ob-field ob-field--checkbox" style="margin-top: 28px;">
+            <label class="ob-checkbox ob-checkbox--inline">
+              <input type="checkbox" id="ob_consent" name="consent" />
+              <span class="ob-checkbox__box"></span>
+              <span class="ob-checkbox__label">
+                I confirm that the information provided is accurate and I consent to Verity Accounting storing and processing my details for the purpose of providing accounting services.
+              </span>
+            </label>
+            <span class="ob-error" id="err_consent"></span>
+          </div>
+
+          <div class="ob-actions">
+            <button type="button" class="ob-btn ob-btn--back" onclick="goToStep(3)">Back</button>
+            <button type="submit" class="ob-btn ob-btn--submit" id="ob_submitBtn">
+              <span class="ob-btn__text">Submit Application</span>
+              <span class="ob-btn__loader" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="ob-feedback ob-feedback--success" id="ob_success" hidden>
+            Your onboarding application has been submitted successfully. A member of our team will contact you within one business day to confirm your details and get you started.
+          </div>
+          <div class="ob-feedback ob-feedback--error" id="ob_error" hidden>
+            Something went wrong while submitting your application. Please try again or contact us directly at info@verityaccounting.co.za.
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="verity accounting firm.png" alt="Verity Accounting Firm" />
+        </a>
+        <p class="footer__tagline">
+          Accurate books. Sound advice. Real results.
+          Proudly serving businesses from Menlyn Maine, Pretoria.
+        </p>
+      </div>
+      <div class="footer__nav">
+        <h4 class="footer__nav-title">Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <h4 class="footer__nav-title">Our Services</h4>
+        <ul>
+          <li><a href="services.html#core">Monthly Bookkeeping</a></li>
+          <li><a href="services.html#core">Tax Support</a></li>
+          <li><a href="services.html#extended">Cloud Accounting</a></li>
+          <li><a href="services.html#extended">Virtual CFO Services</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4 class="footer__nav-title">Contact</h4>
+        <ul>
+          <li>Suite 4B, Menlyn Maine Central Square</li>
+          <li>Waterkloof Glen, Pretoria, 0181</li>
+          <li><a href="tel:+27791234567">079 123 4567</a></li>
+          <li><a href="mailto:info@verityaccounting.co.za">info@verityaccounting.co.za</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&#169; 2024 Verity Accounting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="onboarding.js"></script>
+</body>
+</html>
